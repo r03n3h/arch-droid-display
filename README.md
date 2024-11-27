@@ -46,8 +46,7 @@ paru xrandr
 paru x11vnc
 paru android-sdk-platform-tools
 ```
-
-![[Pasted image 20241123222632.png]]
+![alt text](<img/Pasted image 20241123222632.png>)
  On the tablet:
     - a VNC client app: I use [RealVNC Viewer]( https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 
