@@ -194,9 +194,9 @@ Now we can connect the tablet to the server, add new, use address `127.0.0.1` an
 ![alt text](<img/Pasted image 20241124001241.png>)
 
 ![alt text](<img/Pasted image 20241124001300.png>)
-![[img/Pasted image 20241124001300.png]]
 
 ![alt text](<img/Pasted image 20241124001319.png>)
+
 And we have a tablet as our second screen :)
 
 When ready, close all stuff :
