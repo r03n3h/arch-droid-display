@@ -119,7 +119,7 @@ This tells `eDP-1` is connected as primary display  with resolution`1920x1200` a
 
 We also need the screen resolution of the tablet, we can check this easy online at https://whatismyandroidversion.com/
 
-![[Pasted image 20241123230911.png]]
+![alt text](<img/Pasted image 20241123230911.png>)
 
 We know the tablet's resolution is `2560x1600`. Now we can make a virtual monitor.
 
@@ -183,20 +183,20 @@ $ adb reverse tcp:5900 tcp:5900
 
 - Check the tablet, it is possible you need to accept, otherwise adb will tell that the device is unauthorized. When this happen, just accept the connection on the tablet and run the reverse command again.
 
-![[Pasted image 20241124000138.png]]
+![alt text](<img/Pasted image 20241124000138.png>)
 
 Now we can connect the tablet to the server, add new, use address `127.0.0.1` and give it a nice name.
 
-![[Pasted image 20241124001210.png]]
+![alt text](<img/Pasted image 20241124001210.png>)
 
-![[Pasted image 20241124001230.png]]
+![alt text](<img/Pasted image 20241124001230.png>)
 
-![[Pasted image 20241124001241.png]]
+![alt text](<img/Pasted image 20241124001241.png>)
 
-![[Pasted image 20241124001300.png]]
+![alt text](<img/Pasted image 20241124001300.png>)
+![[img/Pasted image 20241124001300.png]]
 
-![[Pasted image 20241124001319.png]]
-
+![alt text](<img/Pasted image 20241124001319.png>)
 And we have a tablet as our second screen :)
 
 When ready, close all stuff :
