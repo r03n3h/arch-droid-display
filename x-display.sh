@@ -20,17 +20,19 @@ EOF
 # Function to set up vertical display
 setup_vertical() {
   echo -e "Setting up vertical display...\n"
-  xrandr --newmode "800x1280_60.00"  86.50  800 856 944 1088  1280 1281 1284 1325  -HSync +Vsync
+  xrandr --newmode "800x1280_60.00"  86.50  800 856 944 1088  1280 1281 1284 1325  ->
   xrandr --addmode HDMI-1 800x1280_60.00
   xrandr --output HDMI-1 --mode 800x1280_60.00 --left-of eDP-1
+  DISPLAY_MODE="vertical"
 }
 
 # Function to set up horizontal display
 setup_horizontal() {
   echo -e "Setting up horizontal display...\n"
-  xrandr --newmode "1280x800_60.00"  83.46  1280 1344 1480 1680  800 801 804 828  -HSync +Vsync
+  xrandr --newmode "1280x800_60.00"  83.46  1280 1344 1480 1680  800 801 804 828  -H>
   xrandr --addmode HDMI-1 1280x800_60.00
   xrandr --output HDMI-1 --mode 1280x800_60.00 --left-of eDP-1
+  DISPLAY_MODE="horizontal"
 }
 
 # Function to clean display settings
@@ -108,6 +110,14 @@ handle_connection() {
       echo "Invalid choice. Returning to main menu."
       ;;
   esac
+  # Start x11vnc based on display mode
+  if [ "$DISPLAY_MODE" == "vertical" ]; then
+    echo "Starting x11vnc for vertical display..."
+    x11vnc -clip 800x1280+0+0 &
+  elif [ "$DISPLAY_MODE" == "horizontal" ]; then
+    echo "Starting x11vnc for horizontal display..."
+    x11vnc -clip 1280x800+0+0 &
+  fi
 }
 
 # Main menu
@@ -140,6 +150,5 @@ while true; do
       echo "Invalid choice. Please try again."
       ;;
   esac
-
-  echo # Add a blank line for better readability
+  echo
 done
